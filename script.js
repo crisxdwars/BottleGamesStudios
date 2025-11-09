@@ -1,3 +1,3 @@
-function GoTo_apply() {
-      window.location.href = "/apply_form/apply.html";
+function apply() {
+      window.location.href = "apply_form/apply.html";
 }
