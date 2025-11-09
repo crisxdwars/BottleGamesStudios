@@ -1,0 +1,16 @@
+# Define the files the server should load automatically when a folder is requested
+DirectoryIndex index.html ourteam.html apply.html 
+
+# ----------------------------------------
+# 1. Force HTTPS
+# ----------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------------------
+# 2. Hide .html Extension for Clean URLs
+# ----------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
