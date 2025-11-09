@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" ondragstart="return false" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="apply.css">
+    <link rel="icon" type="Image/x-icon" href="../Images/icon.png">
+    <script src="https://kit.fontawesome.com/55331c5140.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script src="apply.js"></script>
+    <title>BGS | Apply Now!</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="javascript:void(0)">News</a></li>
+                <li><a href="javascript:void(0)">About</a></li>
+                <li><a href="javascript:void(0)">Help</a></li>
+                <li><a href="javascript:void(0)">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-header">
+            <h1>Join Our Team</h1>
+            <p>Page description should be here.</p>
+        </div>
+
+        <div class="form-note">
+            <strong>Note:</strong> All fields marked with <span class="required">*</span> are required. Please fill out the form completely and honestly.
+        </div>
+
+        <form class="application-form" id="applicationForm">
+            <div class="form-section">
+                <div class="section-title">Personal Information</div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nickname <span class="required">*</span></label>
+                        <input type="text" id="nickname" placeholder="Your Nickname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Roblox Username <span class="required">*</span></label>
+                        <input type="text" id="robloxUsername" placeholder="Your Roblox username" required>
+                    </div>
+                </div>
+
+                
+                <!--<div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="JohnDoe@example.com" required>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label>Discord Username <span class="required">*</span></label>
+                        <input type="text" id="discord" placeholder="Example#0000" required>
+                    </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Age <span class="required">*</span></label>
+                        <input type="number" id="age" placeholder="Must be 13 or older" min="13" max="100" required>
+                        <div class="helper-text">You must be at least 13 years old to apply</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Country/Region <span class="required">*</span></label>
+                        <input type="text" id="country" placeholder="e.g., United States" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title">Position Details</div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Position <span class="required">*</span></label>
+                        <select id="position" required>
+                            <option value="">Select a position</option>
+                            <option value="developer">UI/UX Designer</option>
+                            <option value="builder">Builder</option>
+                            <option value="designer">Scripter</option>
+                            <option value="admin">Moderator</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Experience Level <span class="required">*</span></label>
+                        <select id="experience" required>
+                            <option value="">Select experience level</option>
+                            <option value="beginner">Beginner (Less than 1 year)</option>
+                            <option value="intermediate">Intermediate (1-2 years)</option>
+                            <option value="advanced">Advanced (3-4 years)</option>
+                            <option value="expert">Expert (5+ years)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Portfolio Link <span class="required">*</span></label>
+                    <input type="url" id="portfolio" placeholder="https://sites.google.com/... or any portfolio link" required>
+                    <div class="helper-text">Share your work, projects, or any relevant examples (Mediafire, GitHub, Fileport, Google Drive, Etc..,)</div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Why do you want to join Bottle Games Studios? <span class="required">*</span></label>
+                    <textarea id="motivation" placeholder="Tell us what interests you about our team and what you hope to contribute..." required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>What relevant skills do you bring? <span class="required">*</span></label>
+                    <textarea id="skills" placeholder="Describe your technical skills, tools you're proficient in, and any specializations..." required></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title">Work Preferences</div>
+                
+                <div class="form-group">
+                    <label>Have you Become an Dev/Mod before? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="teamYes" name="teamWork" value="yes" required>
+                            <label for="teamYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="teamNo" name="teamWork" value="no">
+                            <label for="teamNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" id="paymentGroup">
+                    <label>Are you okay with 2% Share payment? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="shareYes" name="sharePayment" value="yes" required>
+                            <label for="shareYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="shareNo" name="sharePayment" value="no">
+                            <label for="shareNo">No</label>
+                        </div>
+                    </div>
+                    <div class="helper-text">Revenue share based on Game Earnings <img src="../Images/robux.png" width="20rem"></div>
+                </div>
+
+                <div class="form-group hidden" id="unpaidGroup">
+                    <label>Are you okay with not getting paid? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="unpaidYes" name="unpaidWork" value="yes">
+                            <label for="unpaidYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="unpaidNo" name="unpaidWork" value="no">
+                            <label for="unpaidNo">No</label>
+                        </div>
+                    </div>
+                    <div class="helper-text">Admin positions are volunteer-based</div>
+                </div>
+
+            <!--<div class="form-group">
+                    <label>Availability (Hours per week) <span class="required">*</span></label>
+                    <select id="availability" required>
+                        <option value="">Select your availability</option>
+                        <option value="5-10">5-10 hours/week</option>
+                        <option value="10-15">10-15 hours/week</option>
+                        <option value="15-20">15-20 hours/week</option>
+                        <option value="20+">20+ hours/week</option>
+                    </select>
+                </div>-->
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </main>
+</body>
+</html>
