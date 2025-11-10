@@ -110,16 +110,16 @@ main {
 }
 
 .profile-card:hover {
-  border-color: rgba(220, 38, 38, 0.6);
-  box-shadow: 0 0 15px rgba(220, 38, 38, 0.2);
-  transform: translateY(-3px);
+    border-color: rgba(220, 38, 38, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .profile-img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: 2px solid #dc2626;
+  border: 1px solid #550f0f;
   object-fit: cover;
 }
 
@@ -140,12 +140,10 @@ main {
   font-size: 0.9rem;
 }
 
-.profile-stats {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.85rem;
-  color: #9ca3af;
+.visit-button:hover {
+  background: #b91c1c;
 }
+
 
 /* ==== JOIN SECTION ==== */
 .join-section {
@@ -246,15 +244,6 @@ main {
   background-color: #ef4444; 
 }
 
-
-.profile-stats {
-
-  display: flex;
-  gap: 1rem;
-  font-size: 0.85rem;
-  color: #9ca3af;
-  margin-top: 0.2rem;
-}
 
 @media (max-width: 768px) {
   .profile-info {

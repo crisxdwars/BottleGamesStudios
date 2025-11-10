@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('applicationForm');
 
-    const DISCORD_WEBHOOK_URL = 'DC_WEBHOOK';
+    const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1437139718969233532/CgxbtMO-Jb4M1Q5tgJ68pYqwii2ddhkJtoo9G0MFf5mgeT8KKZz-AYoDP5DfXIoyZpwU';
 
     const getRadioValue = (name) => {
         const selected = document.querySelector(`input[name="${name}"]:checked`);
@@ -53,48 +53,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const embed = {
-            title: '📋 New Application Received',
+            title: 'New Application Received',
             color: 14423100, 
             timestamp: new Date().toISOString(),
             fields: [
                 {
-                    name: '👤 Personal Information',
+                    name: '1. Personal Information',
                     value: `**Nickname:** ${formData.nickname}\n**Roblox:** ${formData.robloxUsername}\n**Discord:** ${formData.discord}\n**Age:** ${formData.age}\n**Country:** ${formData.country}`,
                     inline: false
                 },
                 {
-                    name: '💼 Position Details',
+                    name: '2. Position Details',
                     value: `**Position:** ${positionNames[formData.position] || formData.position}\n**Experience:** ${experienceNames[formData.experience] || formData.experience}`,
                     inline: false
                 },
                 {
-                    name: '💰 Payment Preference',
+                    name: '3. Payment Preference',
                     value: paymentInfo,
                     inline: false
                 },
                 {
-                    name: '📚 Previous Experience',
+                    name: '4. Previous Experience',
                     value: formData.historyWork === 'yes' ? '✅ Has been Dev/Mod before' : '❌ No previous Dev/Mod experience',
                     inline: false
                 },
                 {
-                    name: '🔗 Portfolio',
+                    name: '5. Portfolio',
                     value: formData.portfolio,
                     inline: false
                 },
                 {
-                    name: '💭 Motivation',
+                    name: '6. Motivation',
                     value: formData.motivation.length > 1024 ? formData.motivation.substring(0, 1021) + '...' : formData.motivation,
                     inline: false
                 },
                 {
-                    name: '🛠️ Skills',
+                    name: '7. Skills',
                     value: formData.skills.length > 1024 ? formData.skills.substring(0, 1021) + '...' : formData.skills,
                     inline: false
                 }
             ],
             footer: {
-                text: 'BGS Application System'
+                text: 'BottleGames Application System'
             }
         };
 
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok || response.status === 204) {
-                showStatus('Application submitted successfully! Thank you for applying.', false);
+                showStatus('Application submitted successfully! Thank you for applying. Join Our Discord Server and Find mopy_ugc on #Interview Channel to Proceed.', false);
                 form.reset(); 
             } else {
                 const errorText = await response.text();
